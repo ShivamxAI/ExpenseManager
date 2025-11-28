@@ -43,29 +43,27 @@ export const useExpenseContract = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [expenses, setExpenses] = useState<ExpenseItem[]>([])
 
-  const {
-    data: myExpenseCount,
-    refetch: refetchExpenseCount,
-  } = useReadContract({
-    address: contractAddress,
-    abi: contractABI,
-    functionName: "getMyExpenseCount",
-    query: {
-      enabled: !!address,
-    },
-  })
+const { data: myExpenseCount, refetch: refetchExpenseCount } = useReadContract({
+  address: contractAddress,
+  abi: contractABI,
+  functionName: "getMyExpenseCount",
+  account: address,          
+  query: {
+    enabled: !!address,
+  },
+})
 
-  const {
-    data: myTotalExpenses,
-    refetch: refetchTotalExpenses,
-  } = useReadContract({
-    address: contractAddress,
-    abi: contractABI,
-    functionName: "getMyTotalExpenses",
-    query: {
-      enabled: !!address,
-    },
-  })
+
+const { data: myTotalExpenses, refetch: refetchTotalExpenses } = useReadContract({
+  address: contractAddress,
+  abi: contractABI,
+  functionName: "getMyTotalExpenses",
+  account: address,          
+  query: {
+    enabled: !!address,
+  },
+})
+
 
   const { writeContractAsync, data: hash, error, isPending } = useWriteContract()
 
