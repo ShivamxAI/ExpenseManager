@@ -14,7 +14,8 @@ Each user has their own isolated expense list, and no data is shared across user
 The contract requires **no input fields during deployment**, keeping it extremely simple for beginners.
 
 ---
-<img width="1058" height="842" alt="image" src="https://github.com/user-attachments/assets/7e0c271b-2a15-4f37-85a5-8a8ebbb40172" />
+<img width="1876" height="910" alt="image" src="https://github.com/user-attachments/assets/bd82c767-c393-450d-a806-f7fe776d2cd6" />
+
 
 ## 🔧 What This Contract Does
 
